@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.nellions.nellionscanvas.ViewSummaryActivity">
+
+    <item
+        android:id="@+id/action_sync"
+        android:orderInCategory="100"
+        android:title="Sync"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_submmit"
+        android:orderInCategory="150"
+        android:title="Submit"
+        app:showAsAction="ifRoom" />
+
+</menu>

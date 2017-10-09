@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/note_title"
+        style="@android:style/TextAppearance.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Soft Issues"
+        android:padding="10dp"/>
+
+    <EditText
+        android:id="@+id/soft_issues"
+        style="@android:style/TextAppearance.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@android:drawable/editbox_background"
+        android:inputType="textMultiLine"
+        android:isScrollContainer="true"
+        android:gravity="top|start"
+        android:paddingTop="@dimen/activity_horizontal_margin" />
+
+
+    <TextView
+        android:id="@+id/note_title2"
+        style="@android:style/TextAppearance.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hard issues"
+        android:padding="10dp"/>
+
+    <EditText
+        android:id="@+id/hard_issues"
+        style="@android:style/TextAppearance.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@android:drawable/editbox_background"
+        android:inputType="textMultiLine"
+        android:isScrollContainer="true"
+        android:gravity="top|start"
+        android:paddingTop="@dimen/activity_horizontal_margin" />
+
+</LinearLayout>

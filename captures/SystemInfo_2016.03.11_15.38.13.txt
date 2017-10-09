@@ -1,0 +1,87 @@
+Applications Graphics Acceleration Info:
+Uptime: 14387873 Realtime: 14387873
+
+** Graphics info for pid 15884 [com.nellions.nellionscanvas] **
+
+Recent DisplayList operations
+DrawPath
+DrawPath
+DrawPath
+DrawPath
+DrawRect
+DrawRect
+DrawRect
+DrawRect
+DrawRoundRect
+multiDraw
+  DrawText
+multiDraw
+  DrawText
+DrawPath
+DrawPath
+DrawPath
+DrawPath
+DrawRect
+DrawRect
+DrawRect
+DrawRect
+DrawRoundRect
+multiDraw
+  DrawText
+multiDraw
+  DrawText
+DrawPath
+DrawPath
+DrawPath
+DrawRect
+DrawRect
+DrawRect
+DrawRect
+DrawRoundRect
+multiDraw
+  DrawText
+multiDraw
+  DrawText
+DrawPath
+DrawRect
+DrawRoundRect
+DrawText
+DrawPath
+DrawPath
+DrawPath
+DrawPath
+DrawOval
+DrawOval
+DrawOval
+DrawBitmap
+
+Caches:
+Current memory usage / total memory usage (bytes):
+  TextureCache                0 / 15204352
+  LayerCache                  0 /  9961472
+  RenderBufferCache           0 /  1572864
+  GradientCache               0 /   524288
+  PathCache                   0 /  2621440
+  TextDropShadowCache         0 /  1572864
+  PatchCache                  0 /   131072
+  FontRenderer 0 A8           0 /        0
+  FontRenderer 0 RGBA         0 /        0
+  FontRenderer 0 total        0 /        0
+Other:
+  FboCache                    0 /       16
+Total memory usage:
+  0 bytes, 0.00 MB
+
+Profile data in ms:
+
+	com.nellions.nellionscanvas/com.nellions.nellionscanvas.MainActivity/android.view.ViewRootImpl@41d1d5c8
+View hierarchy:
+
+  com.nellions.nellionscanvas/com.nellions.nellionscanvas.MainActivity/android.view.ViewRootImpl@41d1d5c8
+  75 views, 0.00 kB of display lists, 105 frames rendered
+
+
+Total ViewRootImpl: 1
+Total Views:        75
+Total DisplayList:  0.00 kB
+

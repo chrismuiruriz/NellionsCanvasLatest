@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Christopher\.gradle\caches\modules-2\files-2.1\com.readystatesoftware.sqliteasset\sqliteassethelper\2.0.1\d5f02e4a4d65ec0fbb339f2e4228723d1540bb9f\sqliteassethelper-2.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d5f02e4a4d65ec0fbb339f2e4228723d1540bb9f">
+        <dex dex="C:\Users\Christopher\Desktop\Mobile Apps\NellionsCanvas\app\build\intermediates\pre-dexed\debug\sqliteassethelper-2.0.1_91e5c15567c75ec69176aa51481c647cd6995ea8.jar" />
+    </item>
+    <item
+        jar="C:\Users\Christopher\Desktop\Mobile Apps\NellionsCanvas\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="C:\Users\Christopher\Desktop\Mobile Apps\NellionsCanvas\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.1.0_dff22e124c8ff8d3e02cf705b4df4efab139ab9f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Christopher\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="C:\Users\Christopher\Desktop\Mobile Apps\NellionsCanvas\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.0_c145267aa5d284ba14a33453f6d58e22c4308643.jar" />
+    </item>
+    <item
+        jar="C:\Users\Christopher\Desktop\Mobile Apps\NellionsCanvas\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d96886efea7cc74fbb3abd0e3b51d5638fc57be0">
+        <dex dex="C:\Users\Christopher\Desktop\Mobile Apps\NellionsCanvas\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-23.1.0_b1825bdea9e7cb2c16f79260bacfab317193c1fc.jar" />
+    </item>
+    <item
+        jar="C:\Users\Christopher\Desktop\Mobile Apps\NellionsCanvas\app\build\intermediates\exploded-aar\com.github.johnkil.android-robototextview\robototextview\2.4.3\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e1829075f121125e51fe052b94e3998c9b9aac28">
+        <dex dex="C:\Users\Christopher\Desktop\Mobile Apps\NellionsCanvas\app\build\intermediates\pre-dexed\debug\com.github.johnkil.android-robototextview-robototextview-2.4.3_6aee9e5641fa6710e08bed94ac5fe51923b79db3.jar" />
+    </item>
+    <item
+        jar="C:\Users\Christopher\Desktop\Mobile Apps\NellionsCanvas\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="C:\Users\Christopher\Desktop\Mobile Apps\NellionsCanvas\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.0_a280c782d8829a2b247fddbc31c5b882a47763e3.jar" />
+    </item>
+    <item
+        jar="C:\Users\Christopher\.gradle\caches\modules-2\files-2.1\com.mcxiaoke.volley\library\1.0.16\d8f5b9114ebe0f76de7fbf55e950540959ce4ff8\library-1.0.16.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d8f5b9114ebe0f76de7fbf55e950540959ce4ff8">
+        <dex dex="C:\Users\Christopher\Desktop\Mobile Apps\NellionsCanvas\app\build\intermediates\pre-dexed\debug\library-1.0.16_0d3df5a676356f64c3f1eaac6be4d39c71d7cafa.jar" />
+    </item>
+    <item
+        jar="C:\Users\Christopher\Desktop\Mobile Apps\NellionsCanvas\app\build\intermediates\exploded-aar\com.android.support\design\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="19026d31f5d3ae868db81319671a642be5fbba08">
+        <dex dex="C:\Users\Christopher\Desktop\Mobile Apps\NellionsCanvas\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.1.0_a45f75aaa9aab1298eb8f3a38d0c347fb7918994.jar" />
+    </item>
+    <item
+        jar="C:\Users\Christopher\Desktop\Mobile Apps\NellionsCanvas\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="C:\Users\Christopher\Desktop\Mobile Apps\NellionsCanvas\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.1.0_e42af2137dd9ba0e652eb5ee0870b50c8fdb622d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Christopher\Desktop\Mobile Apps\NellionsCanvas\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="C:\Users\Christopher\Desktop\Mobile Apps\NellionsCanvas\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.1.0_c635ffbc5a5425bcda90cc06bbae8295b253a472.jar" />
+    </item>
+
+</items>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="survey_type_array">
+        <item>Office Move</item>
+        <item>House Move</item>
+    </string-array>
+
+    <string-array name="subcribers_value">
+        <item>SAF</item>
+        <item>AIRTEL</item>
+        <item>EQUITEL</item>
+    </string-array>
+
+</resources>
