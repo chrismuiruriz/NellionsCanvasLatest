@@ -6,12 +6,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.SearchView;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,11 +15,19 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.MenuItemCompat;
+
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 import com.nellions.nellionscanvas.adapters.MoveSurveyAdapter;
 import com.nellions.nellionscanvas.database.DatabaseHelper;
 import com.nellions.nellionscanvas.model.AppModel;
@@ -48,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
     //private RecyclerView.Adapter moveSurveyAdapter;
     public MoveSurveyAdapter moveSurveyAdapter;
-    private List<AppModel> appModelList = new ArrayList<AppModel>();
+    private final List<AppModel> appModelList = new ArrayList<AppModel>();
     Preferences preferences;
     String userId, userName;
     ProgressBar progressBar;
@@ -76,12 +78,12 @@ public class MainActivity extends AppCompatActivity {
         userId = preferences.getPreferences(MainActivity.this, Util.USER_PREF, Util.USER_ID);
         userName = preferences.getPreferences(MainActivity.this, Util.USER_PREF, Util.USER_NAME);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         assert getSupportActionBar() != null;
         getSupportActionBar().setTitle(userName);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -89,8 +91,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        listView = (ListView) findViewById(R.id.move_survey_recyclerview);
-        progressBar = (ProgressBar) findViewById(R.id.progress_bar);
+        listView = findViewById(R.id.move_survey_recyclerview);
+        progressBar = findViewById(R.id.progress_bar);
 
         //LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this.getBaseContext());
         //recyclerView.setLayoutManager(linearLayoutManager);
@@ -191,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         searchMenuItem = menu.findItem(R.id.menu_search);
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        SearchView searchView = (SearchView) searchMenuItem.getActionView();
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchMenuItem);
         //mSearchView.setOnQueryTextListener(listener);
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
         searchView.setIconifiedByDefault(false);
@@ -257,7 +259,7 @@ public class MainActivity extends AppCompatActivity {
     public void updateDatabase() {
         String tag_json_obj = "download_tests"; /* tag used to cancel the request */
         //String getMoves_url = "http://192.168.43.95/canvas/nellions_canvas_backend/database/sync.php";
-        String getMoves_url = "https://nellions.co.ke/canvas/nellions_canvas_backend/database/sync.php";
+        String getMoves_url = "https://nellions.co.ug/canvas/nellions_canvas_backend/database/sync.php";
         final ProgressDialog loading = ProgressDialog.show(this, "Updating...", "Please wait...", false, false);
 
         /* param to post to the rest */

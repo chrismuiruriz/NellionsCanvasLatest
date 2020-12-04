@@ -4,12 +4,12 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
 import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -49,9 +49,9 @@ import java.util.Map;
 public class ViewSummaryActivity extends AppCompatActivity {
 
     private RecyclerView.Adapter summaryItemAdapter;
-    private List<AppModel> appModelList = new ArrayList<AppModel>();
-    private List<AppModel> appModelListNotSynced = new ArrayList<AppModel>();
-    private List<AppModel> timestampsItems = new ArrayList<AppModel>();
+    private final List<AppModel> appModelList = new ArrayList<AppModel>();
+    private final List<AppModel> appModelListNotSynced = new ArrayList<AppModel>();
+    private final List<AppModel> timestampsItems = new ArrayList<AppModel>();
     DatabaseHelper databaseHelper;
     String moveId, totalVolume, theSoftIssues, theHardIssues;
     TextView summaryTotalVolumeTv, summaryClientName;
@@ -66,7 +66,7 @@ public class ViewSummaryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_summary);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         restSubmitSurvey = new AppUrl("apiUpdateMoves2");
 
@@ -78,12 +78,12 @@ public class ViewSummaryActivity extends AppCompatActivity {
         moveId = getIntent().getStringExtra("MOVE_ID");
 
         //RecyclerView recyclerView = (RecyclerView) findViewById(R.id.summary_recyclerview);
-        listView = (ListView) findViewById(R.id.survey_summary_listview);
-        summaryTotalVolumeTv = (TextView) findViewById(R.id.summary_total_volume);
-        summaryClientName = (TextView) findViewById(R.id.summary_client_name);
-        progressBar = (ProgressBar) findViewById(R.id.progress_bar);
-        softIssues = (EditText) findViewById(R.id.soft_issues);
-        hardIssues = (EditText) findViewById(R.id.hard_issues);
+        listView = findViewById(R.id.survey_summary_listview);
+        summaryTotalVolumeTv = findViewById(R.id.summary_total_volume);
+        summaryClientName = findViewById(R.id.summary_client_name);
+        progressBar = findViewById(R.id.progress_bar);
+        softIssues = findViewById(R.id.soft_issues);
+        hardIssues = findViewById(R.id.hard_issues);
 
 
         newSurveySummaryAdapter = new NewSurveySummaryAdapter(ViewSummaryActivity.this, appModelList);
@@ -102,7 +102,7 @@ public class ViewSummaryActivity extends AppCompatActivity {
         });
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -239,7 +239,7 @@ public class ViewSummaryActivity extends AppCompatActivity {
         }
 
         String tag_json_obj = "sync"; /* tag used to cancel the request */
-        String getMoves_url = "https://nellions.co.ke/canvas/nellions_canvas_backend/sync.php";
+        String getMoves_url = "https://nellions.co.ug/canvas/nellions_canvas_backend/sync.php";
 
         final ProgressDialog loading = ProgressDialog.show(this, "Syncing...", "Please wait...", false, false);
 
@@ -418,11 +418,11 @@ public class ViewSummaryActivity extends AppCompatActivity {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(ViewSummaryActivity.this);
         alertDialogBuilder.setView(promptView);
 
-        final EditText name = (EditText) promptView.findViewById(R.id.edit_item_name);
+        final EditText name = promptView.findViewById(R.id.edit_item_name);
         name.setText(itemName);
-        final EditText volume = (EditText) promptView.findViewById(R.id.edit_item_volume);
+        final EditText volume = promptView.findViewById(R.id.edit_item_volume);
         volume.setText(itemVolume);
-        final EditText number = (EditText) promptView.findViewById(R.id.edit_item_qunatity);
+        final EditText number = promptView.findViewById(R.id.edit_item_qunatity);
         number.setText(itemQuantity);
 
         // setup a dialog window

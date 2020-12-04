@@ -1,6 +1,6 @@
 package com.nellions.nellionscanvas.adapters;
 
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,8 +49,8 @@ public class PhotoViewAdapter extends RecyclerView.Adapter<PhotoViewAdapter.MyVi
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            this.imageView = (ImageView) itemView.findViewById(R.id.photo);
-            this.textView = (TextView) itemView.findViewById(R.id.photoText);
+            this.imageView = itemView.findViewById(R.id.photo);
+            this.textView = itemView.findViewById(R.id.photoText);
         }
     }
 }

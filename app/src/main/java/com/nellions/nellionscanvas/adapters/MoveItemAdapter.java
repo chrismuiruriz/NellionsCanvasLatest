@@ -1,7 +1,7 @@
 package com.nellions.nellionscanvas.adapters;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -69,15 +69,15 @@ public class MoveItemAdapter extends RecyclerView.Adapter<MoveItemAdapter.MyView
 
         public MyViewHolder(View itemView, MyCustomEditTextListener myCustomEditTextListener, MyCustomEditTextlistenerTwo myCustomEditTextlistenerTwo) {
             super(itemView);
-            this.itemName = (TextView) itemView.findViewById(R.id.item_name);
-            this.itemVolume = (EditText) itemView.findViewById(R.id.item_volume);
-            this.itemQuantity = (EditText) itemView.findViewById(R.id.item_quantity);
+            this.itemName = itemView.findViewById(R.id.item_name);
+            this.itemVolume = itemView.findViewById(R.id.item_volume);
+            this.itemQuantity = itemView.findViewById(R.id.item_quantity);
 
             this.myCustomEditTextListener = myCustomEditTextListener;
             this.myCustomEditTextlistenerTwo = myCustomEditTextlistenerTwo;
             itemQuantity.addTextChangedListener(myCustomEditTextListener);
             itemVolume.addTextChangedListener(myCustomEditTextlistenerTwo);
-            this.itemTotal = (TextView) itemView.findViewById(R.id.item_total_volume);
+            this.itemTotal = itemView.findViewById(R.id.item_total_volume);
         }
     }
 

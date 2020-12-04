@@ -5,12 +5,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.SearchView;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,39 +18,33 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.DefaultRetryPolicy;
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.RetryPolicy;
-import com.android.volley.VolleyError;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.MenuItemCompat;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.nellions.nellionscanvas.adapters.NewRoomAdapter;
 import com.nellions.nellionscanvas.database.DatabaseHelper;
 import com.nellions.nellionscanvas.model.AppModel;
 import com.nellions.nellionscanvas.model.AppUrl;
 import com.nellions.nellionscanvas.model.Util;
-import com.nellions.nellionscanvas.utils.CustomJsonRequest;
 import com.nellions.nellionscanvas.utils.Preferences;
-import com.nellions.nellionscanvas.utils.VolleyApplication;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
-import java.util.Map;
 
 public class CategoryActivity extends AppCompatActivity {
 
     //private RecyclerView.Adapter moveCategoryAdapter;
     NewRoomAdapter moveCategoryAdapter;
     ListView listView;
-    private List<AppModel> appModelList = new ArrayList<AppModel>();
+    private final List<AppModel> appModelList = new ArrayList<AppModel>();
     Preferences preferences;
     String userId, userName, moveId, moveType;
     ProgressBar progressBar;
@@ -75,7 +63,7 @@ public class CategoryActivity extends AppCompatActivity {
         preferences = new Preferences();
         databaseHelper = new DatabaseHelper(CategoryActivity.this);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -88,7 +76,7 @@ public class CategoryActivity extends AppCompatActivity {
         moveType = getIntent().getStringExtra("MOVE_TYPE");
         restGetCategories = new AppUrl("apiGetCategories");
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -96,10 +84,10 @@ public class CategoryActivity extends AppCompatActivity {
             }
         });
 
-        listView = (ListView) findViewById(R.id.move_category_listview);
-        progressBar = (ProgressBar) findViewById(R.id.progress_bar);
-        relativeLayout = (RelativeLayout) findViewById(R.id.linear);
-        arrivedBtn = (Button) findViewById(R.id.btn_arrived);
+        listView = findViewById(R.id.move_category_listview);
+        progressBar = findViewById(R.id.progress_bar);
+        relativeLayout = findViewById(R.id.linear);
+        arrivedBtn = findViewById(R.id.btn_arrived);
         arrivedBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -188,7 +176,7 @@ public class CategoryActivity extends AppCompatActivity {
 
         searchMenuItem = menu.findItem(R.id.menu_search);
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        SearchView searchView = (SearchView) searchMenuItem.getActionView();
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchMenuItem);
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
         searchView.setIconifiedByDefault(false);
 
@@ -247,8 +235,8 @@ public class CategoryActivity extends AppCompatActivity {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(CategoryActivity.this);
         alertDialogBuilder.setView(promptView);
 
-        final EditText softIssues = (EditText) promptView.findViewById(R.id.soft_issues);
-        final EditText hardIssues = (EditText) promptView.findViewById(R.id.hard_issues);
+        final EditText softIssues = promptView.findViewById(R.id.soft_issues);
+        final EditText hardIssues = promptView.findViewById(R.id.hard_issues);
 
         if (databaseHelper.checkIfNotesExists(Integer.parseInt(moveId)) >= 1) {
             softIssues.append(databaseHelper.getNotes(Integer.parseInt(moveId)).get(0).getN_softIssues());
@@ -282,7 +270,7 @@ public class CategoryActivity extends AppCompatActivity {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(CategoryActivity.this);
         alertDialogBuilder.setView(promptView);
 
-        final EditText roomName = (EditText) promptView.findViewById(R.id.room_name);
+        final EditText roomName = promptView.findViewById(R.id.room_name);
         // setup a dialog window
         alertDialogBuilder.setCancelable(false)
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -316,9 +304,9 @@ public class CategoryActivity extends AppCompatActivity {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(CategoryActivity.this);
         alertDialogBuilder.setView(promptView);
 
-        final TextView title = (TextView) promptView.findViewById(R.id.title);
+        final TextView title = promptView.findViewById(R.id.title);
         title.setText("DUPLICATE '"+categoryName+"'");
-        final EditText roomName = (EditText) promptView.findViewById(R.id.room_name);
+        final EditText roomName = promptView.findViewById(R.id.room_name);
         // setup a dialog window
         alertDialogBuilder.setCancelable(false)
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {

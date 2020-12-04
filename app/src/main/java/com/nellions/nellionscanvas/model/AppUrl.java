@@ -11,10 +11,10 @@ public class AppUrl {
     public String restApiUrl = "http://nellions.co.ke/canvas/nellions_canvas_backend/rest/";
     */
 
-    public String domainUrl = "https://nellions.co.ke/canvas/";
-    //public String domainUrl = "http://192.168.43.94/canvas/";
-    public String restApiUrl = "https://nellions.co.ke/canvas/nellions_canvas_backend/rest/";
-    //public String restApiUrl = "http://192.168.43.94/canvas/nellions_canvas_backend/rest/";
+    public String domainUrl = "https://nellions.co.ug/canvas/";
+    //public String domainUrl = "https://nellions.co.ke/canvas/";
+    public String restApiUrl = "https://nellions.co.ug/canvas/nellions_canvas_backend/rest/";
+    //public String restApiUrl = "https://nellions.co.ke/canvas/nellions_canvas_backend/rest/";
 
     public String restApiMethod;
 

@@ -2,10 +2,10 @@ package com.nellions.nellionscanvas;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -34,8 +34,8 @@ import java.util.Map;
 public class SyncronizeActivity extends AppCompatActivity {
 
     DatabaseHelper databaseHelper;
-    private List<AppModel> appModelList = new ArrayList<AppModel>();
-    private List<AppModel> appModelList2 = new ArrayList<AppModel>();
+    private final List<AppModel> appModelList = new ArrayList<AppModel>();
+    private final List<AppModel> appModelList2 = new ArrayList<AppModel>();
     ImageView syncRoomsImg, syncItemsImg;
     TextView roomsTitle, itemsTitle, photosTitle;
 
@@ -43,16 +43,16 @@ public class SyncronizeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_syncronize);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         databaseHelper = new DatabaseHelper(SyncronizeActivity.this);
 
-        syncRoomsImg = (ImageView) findViewById(R.id.sync_rooms_btn);
-        roomsTitle = (TextView) findViewById(R.id.sync_rooms);
-        itemsTitle = (TextView) findViewById(R.id.sync_items);
-        syncItemsImg = (ImageView) findViewById(R.id.sync_items_btn);
+        syncRoomsImg = findViewById(R.id.sync_rooms_btn);
+        roomsTitle = findViewById(R.id.sync_rooms);
+        itemsTitle = findViewById(R.id.sync_items);
+        syncItemsImg = findViewById(R.id.sync_items_btn);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -115,7 +115,7 @@ public class SyncronizeActivity extends AppCompatActivity {
 
     public void syncRooms() {
         String tag_json_obj = "sync"; /* tag used to cancel the request */
-        String getMoves_url = "https://nellions.co.ke/canvas/nellions_canvas_backend/sync_rooms.php";
+        String getMoves_url = "https://nellions.co.ug/canvas/nellions_canvas_backend/sync_rooms.php";
 
         //Showing the progress dialog
         final ProgressDialog loading = ProgressDialog.show(this, "Syncing...", "Please wait...", false, false);
@@ -170,7 +170,7 @@ public class SyncronizeActivity extends AppCompatActivity {
     //sync items
     public void syncItems() {
         String tag_json_obj = "sync"; /* tag used to cancel the request */
-        String getMoves_url = "https://nellions.co.ke/canvas/nellions_canvas_backend/sync_items.php";
+        String getMoves_url = "https://nellions.co.ug/canvas/nellions_canvas_backend/sync_items.php";
 
         //Showing the progress dialog
         final ProgressDialog loading = ProgressDialog.show(this, "Syncing...", "Please wait...", false, false);

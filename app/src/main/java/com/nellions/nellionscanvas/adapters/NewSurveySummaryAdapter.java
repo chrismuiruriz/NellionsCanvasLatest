@@ -22,7 +22,7 @@ public class NewSurveySummaryAdapter extends BaseAdapter {
     public List<AppModel> appModelList;
     List<AppModel> appModelList2;
     Filter clientFilter;
-    private LayoutInflater inflater;
+    private final LayoutInflater inflater;
     Context context;
 
     public NewSurveySummaryAdapter(Context context, List<AppModel> appModelList) {
@@ -57,12 +57,12 @@ public class NewSurveySummaryAdapter extends BaseAdapter {
             view = inflater.inflate(R.layout.summary_item_layout, parent, false);
             myViewHolder = new MyViewHolder();
 
-            myViewHolder.summaryItemCategory = (TextView) view.findViewById(R.id.summary_item_category);
-            myViewHolder.summaryItemName = (TextView) view.findViewById(R.id.summary_item_name);
-            myViewHolder.summaryItemTotal = (TextView) view.findViewById(R.id.summary_item_total);
-            myViewHolder.summaryItemVolume = (TextView) view.findViewById(R.id.summary_item_volume);
-            myViewHolder.summaryItemQty = (TextView) view.findViewById(R.id.summary_item_number);
-            myViewHolder.syncStatus = (ImageView) view.findViewById(R.id.sync_status);
+            myViewHolder.summaryItemCategory = view.findViewById(R.id.summary_item_category);
+            myViewHolder.summaryItemName = view.findViewById(R.id.summary_item_name);
+            myViewHolder.summaryItemTotal = view.findViewById(R.id.summary_item_total);
+            myViewHolder.summaryItemVolume = view.findViewById(R.id.summary_item_volume);
+            myViewHolder.summaryItemQty = view.findViewById(R.id.summary_item_number);
+            myViewHolder.syncStatus = view.findViewById(R.id.sync_status);
             view.setTag(myViewHolder);
         } else {
             view = contentView;

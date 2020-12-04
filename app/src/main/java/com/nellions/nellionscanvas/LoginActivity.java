@@ -3,7 +3,7 @@ package com.nellions.nellionscanvas;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -52,9 +52,9 @@ public class LoginActivity extends AppCompatActivity {
 
     //set up views
     private void setViews() {
-        username = (EditText) findViewById(R.id.login_username);
-        password = (EditText) findViewById(R.id.login_password);
-        loginBtn = (Button) findViewById(R.id.login_btn);
+        username = findViewById(R.id.login_username);
+        password = findViewById(R.id.login_password);
+        loginBtn = findViewById(R.id.login_btn);
     }
 
     //make sure the details submitted are ok
@@ -123,6 +123,10 @@ public class LoginActivity extends AppCompatActivity {
 
          /* add the request to the request queue */
         VolleyApplication.getInstance().addToRequestQueue(loginRequest, tag_json_obj);
-
     }
+
+
+    //ssl manenos
+
+
 }

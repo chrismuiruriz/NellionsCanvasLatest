@@ -20,6 +20,6 @@
         android:clickable="true"
         android:contentDescription="View image"
         android:foreground="?attr/selectableItemBackground"
-        android:src="@drawable/placeholder" />
+        app:srcCompat="@drawable/placeholder" />
 
 </ScrollView>

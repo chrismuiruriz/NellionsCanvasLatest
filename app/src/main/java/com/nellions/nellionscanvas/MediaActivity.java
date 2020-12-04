@@ -8,10 +8,10 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.util.Base64;
 import android.util.Log;
 import android.view.Menu;
@@ -28,7 +28,7 @@ import java.io.File;
 
 public class MediaActivity extends AppCompatActivity {
 
-    private static int CAMERA_REQUEST = 1888;
+    private static final int CAMERA_REQUEST = 1888;
     ImageView imageView;
     String imageName, categoryId, moveId, clientName;
     DatabaseHelper databaseHelper;
@@ -37,7 +37,7 @@ public class MediaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_media);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         databaseHelper = new DatabaseHelper(MediaActivity.this);
@@ -46,8 +46,8 @@ public class MediaActivity extends AppCompatActivity {
         categoryId = getIntent().getStringExtra("CATEGORY_ID");
         clientName = getIntent().getStringExtra("CLIENT_NAME");
 
-        imageView = (ImageView) findViewById(R.id.imageView);
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        imageView = findViewById(R.id.imageView);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

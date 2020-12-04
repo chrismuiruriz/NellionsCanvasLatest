@@ -4,13 +4,14 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.os.Build;
 import android.util.AttributeSet;
-import android.widget.TextView;
+
+import androidx.appcompat.widget.AppCompatTextView;
 
 /**
  * Created by Chris Muiruri on 12/31/2015.
  */
 
-public class AnimTextView extends TextView {
+public class AnimTextView extends AppCompatTextView {
     public AnimTextView(Context context) {
         super(context);
     }
@@ -25,7 +26,7 @@ public class AnimTextView extends TextView {
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public AnimTextView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
+        super(context, attrs, defStyleAttr);
     }
 
     private int score;

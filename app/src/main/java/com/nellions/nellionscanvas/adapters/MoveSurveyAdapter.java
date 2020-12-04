@@ -23,7 +23,7 @@ public class MoveSurveyAdapter extends BaseAdapter implements Filterable {
     public List<AppModel> appModelList;
     List<AppModel> appModelList2;
     Filter clientFilter;
-    private LayoutInflater inflater;
+    private final LayoutInflater inflater;
     Context context;
 
     public MoveSurveyAdapter(Context context, List<AppModel> appModelList) {
@@ -62,10 +62,10 @@ public class MoveSurveyAdapter extends BaseAdapter implements Filterable {
         if (convertView == null) {
             view = inflater.inflate(R.layout.moves_survey_layout, parent, false);
             myViewHolder = new MyViewHolder();
-            myViewHolder.clientName = (TextView) view.findViewById(R.id.clientName);
-            myViewHolder.moveDescription = (TextView) view.findViewById(R.id.survey_description);
-            myViewHolder.moveDate = (TextView) view.findViewById(R.id.survey_date);
-            myViewHolder.moveRep = (TextView) view.findViewById(R.id.move_rep);
+            myViewHolder.clientName = view.findViewById(R.id.clientName);
+            myViewHolder.moveDescription = view.findViewById(R.id.survey_description);
+            myViewHolder.moveDate = view.findViewById(R.id.survey_date);
+            myViewHolder.moveRep = view.findViewById(R.id.move_rep);
             view.setTag(myViewHolder);
         } else {
             view = convertView;

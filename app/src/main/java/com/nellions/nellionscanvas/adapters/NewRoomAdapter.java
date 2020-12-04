@@ -23,7 +23,7 @@ public class NewRoomAdapter extends BaseAdapter implements Filterable {
     public List<AppModel> appModelList;
     List<AppModel> appModelList2;
     Filter clientFilter;
-    private LayoutInflater inflater;
+    private final LayoutInflater inflater;
     Context context;
 
     public NewRoomAdapter(Context context, List<AppModel> appModelList) {
@@ -60,7 +60,7 @@ public class NewRoomAdapter extends BaseAdapter implements Filterable {
         if (contentView == null) {
             view = inflater.inflate(R.layout.moves_category_layout, parent, false);
             myViewHolder = new MyViewHolder();
-            myViewHolder.categoryName = (TextView) view.findViewById(R.id.categoryName);
+            myViewHolder.categoryName = view.findViewById(R.id.categoryName);
             view.setTag(myViewHolder);
         } else {
             view = contentView;

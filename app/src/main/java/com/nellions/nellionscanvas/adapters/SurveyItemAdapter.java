@@ -1,6 +1,6 @@
 package com.nellions.nellionscanvas.adapters;
 
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,12 +64,12 @@ public class SurveyItemAdapter extends RecyclerView.Adapter<SurveyItemAdapter.My
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            this.summaryItemCategory = (TextView) itemView.findViewById(R.id.summary_item_category);
-            this.summaryItemName = (TextView) itemView.findViewById(R.id.summary_item_name);
-            this.summaryItemTotal = (TextView) itemView.findViewById(R.id.summary_item_total);
-            this.summaryItemVolume = (TextView) itemView.findViewById(R.id.summary_item_volume);
-            this.summaryItemQty = (TextView) itemView.findViewById(R.id.summary_item_number);
-            this.syncStatus = (ImageView) itemView.findViewById(R.id.sync_status);
+            this.summaryItemCategory = itemView.findViewById(R.id.summary_item_category);
+            this.summaryItemName = itemView.findViewById(R.id.summary_item_name);
+            this.summaryItemTotal = itemView.findViewById(R.id.summary_item_total);
+            this.summaryItemVolume = itemView.findViewById(R.id.summary_item_volume);
+            this.summaryItemQty = itemView.findViewById(R.id.summary_item_number);
+            this.syncStatus = itemView.findViewById(R.id.sync_status);
         }
     }
 }

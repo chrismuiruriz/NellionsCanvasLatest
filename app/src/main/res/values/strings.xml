@@ -11,15 +11,10 @@
     <string name="prompt_username">Username</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Login</string>
-    <string name="invalid_email">This email address is invalid</string>
-    <string name="invalid_password">Password is too short</string>
-    <string name="incorrect_password">Password is incorrect</string>
-    <string name="field_required">This field is required</string>
     <string name="title_activity_category">categoryActivity</string>
     <string name="title_activity_item">ItemActivity</string>
 
     <!-- Strings -->
-    <string name="main_logout">Logout</string>
     <string name="title_activity_view_summary">Summary</string>
     <string name="title_activity_new_room">New Room</string>
     <string name="title_activity_new_item">New Item</string>

@@ -23,7 +23,7 @@ public class ConnectionDetector {
     public static int TYPE_WIFI = 1;
     public static int TYPE_MOBILE = 2;
     public static int TYPE_NOT_CONNECTED = 0;
-    private Context _context;
+    private final Context _context;
 
     public ConnectionDetector(Context context) {
         this._context = context;

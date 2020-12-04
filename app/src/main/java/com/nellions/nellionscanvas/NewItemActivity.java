@@ -1,9 +1,9 @@
 package com.nellions.nellionscanvas;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -30,14 +30,14 @@ public class NewItemActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_item);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         databaseHelper = new DatabaseHelper(NewItemActivity.this);
 
-        itemName = (EditText) findViewById(R.id.name);
-        itemVolume = (EditText) findViewById(R.id.volume);
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        itemName = findViewById(R.id.name);
+        itemVolume = findViewById(R.id.volume);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,7 +54,7 @@ public class NewItemActivity extends AppCompatActivity {
 
     /* set up category  spinner */
     public void setUpSpinner() {
-        categorySpinner = (Spinner) findViewById(R.id.rooms_spinner);
+        categorySpinner = findViewById(R.id.rooms_spinner);
 
         roomSpinnerAdapter = new RoomSpinnerAdapter(NewItemActivity.this,
                 android.R.layout.simple_spinner_item, appModelList);

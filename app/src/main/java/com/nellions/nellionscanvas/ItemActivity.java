@@ -4,12 +4,12 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -31,12 +31,10 @@ import com.nellions.nellionscanvas.database.DatabaseHelper;
 import com.nellions.nellionscanvas.model.AppModel;
 import com.nellions.nellionscanvas.model.AppUrl;
 import com.nellions.nellionscanvas.model.Util;
-import com.nellions.nellionscanvas.utils.CustomJsonRequest;
 import com.nellions.nellionscanvas.utils.CustomRequest;
 import com.nellions.nellionscanvas.utils.Preferences;
 import com.nellions.nellionscanvas.utils.VolleyApplication;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -48,7 +46,7 @@ import java.util.Map;
 public class ItemActivity extends AppCompatActivity {
 
     private RecyclerView.Adapter moveItemAdapter;
-    private List<AppModel> appModelList = new ArrayList<AppModel>();
+    private final List<AppModel> appModelList = new ArrayList<AppModel>();
     Preferences preferences;
     String userId, userName, moveId, category_id, clientName, category_name, category_code;
     ProgressBar progressBar;
@@ -67,7 +65,7 @@ public class ItemActivity extends AppCompatActivity {
         preferences = new Preferences();
         databaseHelper = new DatabaseHelper(ItemActivity.this);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -88,7 +86,7 @@ public class ItemActivity extends AppCompatActivity {
         category_name = getIntent().getStringExtra("CATEGORY_NAME");
         category_code = getIntent().getStringExtra("CATEGORY_CODE");
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -97,8 +95,8 @@ public class ItemActivity extends AppCompatActivity {
             }
         });
 
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.move_item_recyclerview);
-        progressBar = (ProgressBar) findViewById(R.id.progress_bar);
+        RecyclerView recyclerView = findViewById(R.id.move_item_recyclerview);
+        progressBar = findViewById(R.id.progress_bar);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this.getBaseContext());
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -208,9 +206,9 @@ public class ItemActivity extends AppCompatActivity {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(ItemActivity.this);
         alertDialogBuilder.setView(promptView);
 
-        final EditText name = (EditText) promptView.findViewById(R.id.new_item_name);
-        final EditText volume = (EditText) promptView.findViewById(R.id.new_item_volume);
-        final EditText number = (EditText) promptView.findViewById(R.id.new_item_qunatity);
+        final EditText name = promptView.findViewById(R.id.new_item_name);
+        final EditText volume = promptView.findViewById(R.id.new_item_volume);
+        final EditText number = promptView.findViewById(R.id.new_item_qunatity);
 
         // setup a dialog window
         alertDialogBuilder.setCancelable(false)

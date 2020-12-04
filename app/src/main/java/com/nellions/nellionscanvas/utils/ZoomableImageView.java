@@ -10,10 +10,12 @@ import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.widget.ImageView;
 
+import androidx.appcompat.widget.AppCompatImageView;
+
 /**
  * Created by Chris Muiruri on 2/18/2016.
  */
-public class ZoomableImageView extends ImageView {
+public class ZoomableImageView extends AppCompatImageView {
     Matrix matrix = new Matrix();
 
     static final int NONE = 0;

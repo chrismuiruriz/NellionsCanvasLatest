@@ -18,8 +18,8 @@ import java.util.Map;
  */
 public class CustomRequest extends Request<JSONObject> {
 
-    private Response.Listener<JSONObject> listener;
-    private Map<String, String> params;
+    private final Response.Listener<JSONObject> listener;
+    private final Map<String, String> params;
 
     public CustomRequest(String url, Map<String, String> params,
                          Response.Listener<JSONObject> responseListener, Response.ErrorListener errorListener) {

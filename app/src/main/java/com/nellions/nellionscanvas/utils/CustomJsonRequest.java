@@ -21,7 +21,7 @@ import java.util.Map;
 public class CustomJsonRequest extends Request<JSONArray> {
 
     Map<String, String> params;
-    private Response.Listener listener;
+    private final Response.Listener listener;
 
     public CustomJsonRequest(int requestMethod, String url, Map<String, String> params,
                              Response.Listener responseListener, Response.ErrorListener errorListener) {

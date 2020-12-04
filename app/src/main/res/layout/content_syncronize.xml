@@ -36,7 +36,7 @@
             android:layout_weight="0"
             android:layout_gravity="center_vertical"
             android:tint="@color/colorPrimary"
-            android:src="@android:drawable/stat_notify_sync"/>
+            app:srcCompat="@android:drawable/stat_notify_sync"/>
 
     </LinearLayout>
 
@@ -64,7 +64,7 @@
             android:layout_weight="0"
             android:layout_gravity="center_vertical"
             android:tint="@color/colorPrimary"
-            android:src="@android:drawable/stat_notify_sync"/>
+            app:srcCompat="@android:drawable/stat_notify_sync"/>
 
     </LinearLayout>
 
@@ -92,7 +92,7 @@
             android:layout_weight="0"
             android:layout_gravity="center_vertical"
             android:tint="@color/colorPrimary"
-            android:src="@android:drawable/stat_notify_sync"/>
+            app:srcCompat="@android:drawable/stat_notify_sync"/>
 
     </LinearLayout>
 
