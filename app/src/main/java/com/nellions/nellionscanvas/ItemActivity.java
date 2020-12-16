@@ -116,6 +116,9 @@ public class ItemActivity extends AppCompatActivity {
 
     //get the categories
     public void getItems() {
+        if(category_code == null) {
+            return;
+        }
         for (int i = 0; i < databaseHelper.getCategoryItems(Integer.parseInt(category_code)).size(); i++) {
             AppModel appModel = new AppModel();
             appModel.setI_moveId(moveId);
